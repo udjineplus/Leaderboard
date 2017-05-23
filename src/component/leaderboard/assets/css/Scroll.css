@@ -1,0 +1,194 @@
+.scroll-box {
+    position: relative
+}
+.scroll-box:focus {
+    outline: none
+}
+.scroll-box--disabled>.scroll-box__viewport {
+    overflow: hidden!important
+}
+.scroll-box--disabled>.scroll-box__track {
+    visibility: hidden!important
+}
+.scroll-box--wrapped>.scroll-box__viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: inherit;
+    border-radius: inherit
+}
+.scroll-box--wrapped>.scroll-box__track {
+    display: block
+}
+.scroll-box--native.scroll-box--has-axis-y.scroll-box--show-axis-y>.scroll-box__viewport {
+    overflow-y: auto
+}
+.scroll-box--native.scroll-box--has-axis-x.scroll-box--show-axis-x>.scroll-box__viewport {
+    overflow-x: auto
+}
+.scroll-box--native>.scroll-box__viewport {
+    -webkit-overflow-scrolling: touch
+}
+.scroll-box:not(.scroll-box--native).scroll-box--has-axis-x.scroll-box--show-axis-x>.scroll-box__track--x,
+.scroll-box:not(.scroll-box--native).scroll-box--has-axis-y.scroll-box--show-axis-y>.scroll-box__track--y {
+    visibility: visible
+}
+.scroll-box:not(.scroll-box--native).scroll-box--has-axis-x.scroll-box--show-axis-x.scroll-box--has-axis-y.scroll-box--show-axis-y:not(.scroll-box--outset)>.scroll-box__track--y {
+    margin-bottom: 14px
+}
+.scroll-box:not(.scroll-box--native).scroll-box--has-axis-x.scroll-box--show-axis-x.scroll-box--has-axis-y.scroll-box--show-axis-y:not(.scroll-box--outset)>.scroll-box__track--x {
+    margin-right: 14px
+}
+.scroll-box__handle,
+.scroll-box__track {
+    position: absolute;
+    border-radius: 10.2px;
+    transition: .2s ease-in-out
+}
+.scroll-box__handle {
+    transition-property: background;
+    cursor: default
+}
+.scroll-box__handle--y {
+    width: 100%;
+    min-height: 30px;
+    max-height: 100%;
+    top: 0
+}
+.scroll-box__handle--x {
+    height: 100%;
+    min-width: 30px;
+    max-width: 100%;
+    left: 0
+}
+.scroll-box__track {
+
+    z-index: 20;
+    transition-property: background, width, height;
+    cursor: default
+}
+.scroll-box__track--y {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 6px;
+    margin: 4px 4px 4px 0
+}
+.scroll-box__track--y.scroll-box__track--dragged,
+.scroll-box__track--y.scroll-box__track--hover {
+    width: 10.2px
+}
+.scroll-box--outset>.scroll-box__track--y {
+    left: 100%;
+    margin-left: 4px
+}
+.scroll-box__track--x {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    margin: 0 4px 4px
+}
+.scroll-box__track--x.scroll-box__track--dragged,
+.scroll-box__track--x.scroll-box__track--hover {
+    height: 10.2px
+}
+.scroll-box--outset>.scroll-box__track--x {
+    top: 100%;
+    margin-top: 4px
+}
+.scroll-box>.scroll-box__track {
+    background: transparent
+}
+.scroll-box>.scroll-box__track>.scroll-box__handle {
+    background: rgba(0, 0, 0, .4)
+}
+.scroll-box>.scroll-box__track--dragged,
+.scroll-box>.scroll-box__track--hover {
+    background: rgba(0, 0, 0, .2)
+}
+.scroll-box>.scroll-box__track--dragged>.scroll-box__handle,
+.scroll-box>.scroll-box__track--hover>.scroll-box__handle {
+    background: rgba(0, 0, 0, .6)
+}
+body,
+html {
+    height: 100%;
+    width: 100%;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0
+}
+#demo {
+    padding: 50px 0
+}
+.scroll-box--example {
+    height: 300px;
+    margin: 30px 15px 40px;
+    background-color: rgba(74, 202, 255, .88);
+    border-radius: 5px
+}
+.scroll-box__bg {
+    width: 1680px;
+    height: 1050px;
+    background-size: contain;
+    text-align: center
+}
+.scroll-box__bg h1 {
+    padding-top: 500px;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 0 7px #000
+}
+.fa--left {
+    margin-right: 3px
+}
+kbd {
+    background-color: #d3d7cf;
+    color: #000
+}
+h1,
+h2 {
+    font-weight: 700
+}
+h1 {
+    display: block;
+    text-align: center
+}
+.form-group--disabled {
+    color: #888
+}
+.form-group--disabled code {
+    color: #c7798d
+}
+.form-group--disabled .prop__name {
+    background-color: #888a85;
+    color: #fff
+}
+.form-group--disabled .prop__type {
+    color: #8b8b8b
+}
+.form-control,
+.input-group {
+    max-width: 200px
+}
+.input-group+.input-group {
+    margin-top: 10px
+}
+.prop__name {
+    background-color: #2e3436;
+    color: #fff
+}
+.prop__type {
+    background-color: #e7e7e7;
+    color: #000
+}
+* {
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif
+}
+.light {
+    font-weight: 200
+}
